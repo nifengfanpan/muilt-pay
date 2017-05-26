@@ -10,7 +10,6 @@
             "email": "1092270242@qq.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "php": ">=5.6",
         "ext-bcmath": "*",
