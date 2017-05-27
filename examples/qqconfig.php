@@ -6,8 +6,8 @@
  */
 
 return [
-    'mch_id'            => '1480265401',// 商户id
-    'md5_key'           => 'f714659456dfc18dc64aeadacb25cbf5',// md5 秘钥
+    'mch_id'            => 'xxx',// 商户id
+    'md5_key'           => 'xxxx',// md5 秘钥
     'sign_type'         => 'MD5',// MD5  HMAC-SHA256
     'limit_pay'         => [
         //'no_credit',
