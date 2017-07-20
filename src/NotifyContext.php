@@ -13,6 +13,7 @@ use Payment\Notify\AliNotify;
 use Payment\Notify\CmbNotify;
 use Payment\Notify\NotifyStrategy;
 use Payment\Notify\PayNotifyInterface;
+use Payment\Notify\QqNotify;
 use Payment\Notify\WxNotify;
 use Payment\Common\PayException;
 
@@ -46,6 +47,9 @@ class NotifyContext
                     break;
                 case Config::CMB_CHARGE:
                     $this->notify = new CmbNotify($config);
+                    break;
+                case Config::QQ_CHARGE:
+                    $this->notify = new QqNotify($config);
                     break;
                 default:
                     throw new PayException('当前仅支持：ALI_CHARGE WX_CHARGE CMB_CHARGE 常量');

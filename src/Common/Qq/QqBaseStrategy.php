@@ -67,7 +67,7 @@ abstract class QqBaseStrategy implements BaseStrategy
             throw new PayException('目前不支持该接口。请联系开发者添加');
         }
 
-        print_r($xml);
+        //print_r($xml);
         $responseTxt = $this->curlPost($xml, $url);
         if ($responseTxt['error']) {
             throw new PayException('网络发生错误，请稍后再试curl返回码：' . $responseTxt['message']);
@@ -129,7 +129,7 @@ abstract class QqBaseStrategy implements BaseStrategy
 
         $xml = DataParser::toXml($this->reqData->getData());
         $ret = $this->sendReq($xml);
-        var_dump($ret);
+        //var_dump($ret);
         // 检查返回的数据是否被篡改
         $flag = $this->verifySign($ret);
         if (!$flag) {
