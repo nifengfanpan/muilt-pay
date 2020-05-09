@@ -20,7 +20,7 @@ class ArrayUtil
     public static function paraFilter($para)
     {
         $paraFilter = [];
-        while (list($key, $val) = each($para)) {
+        foreach($para as $key=>$val){
             if ($val === '' || $val === null) {
                 continue;
             } else {
@@ -95,7 +95,7 @@ class ArrayUtil
 
         reset($para);
         $arg = '';
-        while (list($key, $val) = each($para)) {
+        foreach($para as $key=>$val){
             if (is_array($val)) {
                 continue;
             }
